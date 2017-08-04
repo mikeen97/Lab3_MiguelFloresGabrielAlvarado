@@ -80,7 +80,47 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                         String nombre = "", apellido = "", raza = "", acompanante = "", poderAtaque = "", defensa = "", curacion = "";
                         double altura = 0;
                         Date fecha;
-                        
+                        nombre = JOptionPane.showInputDialog("Ingrese nombre del integrante");
+                        raza = JOptionPane.showInputDialog("Ingrese posicion la raza que desea para el integrante\n"
+                                + "1) Aguilas\n"
+                                + "2) Arañas\n"
+                                + "3) Balrogs\n"
+                                + "4) Bestias Aladas\n"
+                                + "5) Dragones\n"
+                                + "");
+                        apellido = JOptionPane.showInputDialog("Ingrese apellido del integrante");
+                        acompanante = JOptionPane.showInputDialog("Ingrese posicion del acompañante que desea para el integrante\n"
+                                + "1) Aguilas\n"
+                                + "2) Arañas\n"
+                                + "3) Balrogs\n"
+                                + "4) Bestias Aladas\n"
+                                + "5) Dragones\n"
+                                + "");
+                        altura = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la altura de el integrante"));
+                        if (acompanante.equalsIgnoreCase("1")) {
+
+                        }
+                        if (acompanante.equalsIgnoreCase("2")) {
+
+                        }
+                        if (acompanante.equalsIgnoreCase("3")) {
+
+                        }
+                        if (acompanante.equalsIgnoreCase("4")) {
+
+                        }
+                        if (acompanante.equalsIgnoreCase("5")) {
+
+                        }
+                        if (acompanante.equalsIgnoreCase("6")) {
+
+                        }
+                        if (acompanante.equalsIgnoreCase("7")) {
+
+                        }
+                        if (acompanante.equalsIgnoreCase("8")) {
+
+                        }
                     }
                 }
             }
