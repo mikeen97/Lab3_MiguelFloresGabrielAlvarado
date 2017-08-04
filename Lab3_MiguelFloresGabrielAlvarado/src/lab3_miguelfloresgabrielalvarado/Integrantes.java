@@ -12,20 +12,22 @@ import java.util.Date;
  * @author Miguel Flores
  */
 public class Integrantes {
-    
+
+    private String raza;
     private String nombre;
     private String apellido;
     private double altura;
     private Date fechaNacimiento;
     private String acompanante;
-    private String poderAtaque;
-    private String defensa;
-    private String curacion;
+    private int poderAtaque;
+    private int defensa;
+    private int curacion;
 
     public Integrantes() {
     }
 
-    public Integrantes(String nombre, String apellido, double altura, Date fechaNacimiento, String acompanante, String poderAtaque, String defensa, String curacion) {
+    public Integrantes(String raza, String nombre, String apellido, double altura, Date fechaNacimiento, String acompanante, int poderAtaque, int defensa, int curacion) {
+        this.raza = raza;
         this.nombre = nombre;
         this.apellido = apellido;
         this.altura = altura;
@@ -35,6 +37,15 @@ public class Integrantes {
         this.defensa = defensa;
         this.curacion = curacion;
     }
+
+    public String getRaza() {
+        return raza;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -76,29 +87,31 @@ public class Integrantes {
         this.acompanante = acompanante;
     }
 
-    public String getPoderAtaque() {
+    public int getPoderAtaque() {
         return poderAtaque;
     }
 
-    public void setPoderAtaque(String poderAtaque) {
+    public void setPoderAtaque(int poderAtaque) {
         this.poderAtaque = poderAtaque;
     }
 
-    public String getDefensa() {
+    public int getDefensa() {
         return defensa;
     }
 
-    public void setDefensa(String defensa) {
+    public void setDefensa(int defensa) {
         this.defensa = defensa;
     }
 
-    public String getCuracion() {
+    public int getCuracion() {
         return curacion;
     }
 
-    public void setCuracion(String curacion) {
+    public void setCuracion(int curacion) {
         this.curacion = curacion;
     }
+
+
 
     @Override
     public String toString() {

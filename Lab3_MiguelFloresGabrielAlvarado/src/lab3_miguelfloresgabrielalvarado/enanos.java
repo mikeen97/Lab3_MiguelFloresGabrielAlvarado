@@ -20,12 +20,14 @@ public class enanos extends Integrantes{
     public enanos() {
     }
 
-    public enanos(String enenoBatalla, String barba, String hacha, String nombre, String apellido, double altura, Date fechaNacimiento, String acompanante, String poderAtaque, String defensa, String curacion) {
-        super(nombre, apellido, altura, fechaNacimiento, acompanante, poderAtaque, defensa, curacion);
+    public enanos(String enenoBatalla, String barba, String hacha, String raza, String nombre, String apellido, double altura, Date fechaNacimiento, String acompanante, int poderAtaque, int defensa, int curacion) {
+        super(raza, nombre, apellido, altura, fechaNacimiento, acompanante, poderAtaque, defensa, curacion);
         this.enenoBatalla = enenoBatalla;
         this.barba = barba;
         this.hacha = hacha;
     }
+
+ 
 
     public String getEnenoBatalla() {
         return enenoBatalla;

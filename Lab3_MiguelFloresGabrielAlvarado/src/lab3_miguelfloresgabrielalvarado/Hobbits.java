@@ -20,10 +20,12 @@ public class Hobbits extends Integrantes {
     public Hobbits() {
     }
 
-    public Hobbits(String anillos, String nombre, String apellido, double altura, Date fechaNacimiento, String acompanante, String poderAtaque, String defensa, String curacion) {
-        super(nombre, apellido, altura, fechaNacimiento, acompanante, poderAtaque, defensa, curacion);
+    public Hobbits(String anillos, String raza, String nombre, String apellido, double altura, Date fechaNacimiento, String acompanante, int poderAtaque, int defensa, int curacion) {
+        super(raza, nombre, apellido, altura, fechaNacimiento, acompanante, poderAtaque, defensa, curacion);
         this.anillos = anillos;
     }
+
+  
 
     public String getAnillos() {
         return anillos;

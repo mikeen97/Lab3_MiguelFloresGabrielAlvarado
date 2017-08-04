@@ -41,7 +41,7 @@ public class pueblo {
 
     @Override
     public String toString() {
-        return "pueblo{" + "nombre=" + nombre + '}';
+        return nombre;
     }
 
 }

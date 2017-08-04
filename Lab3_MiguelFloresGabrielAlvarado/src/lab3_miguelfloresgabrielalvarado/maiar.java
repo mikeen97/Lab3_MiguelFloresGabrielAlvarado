@@ -19,8 +19,8 @@ public class maiar extends Integrantes {
     public maiar() {
     }
 
-    public maiar(String arma, String nombre, String apellido, double altura, Date fechaNacimiento, String acompanante, String poderAtaque, String defensa, String curacion) {
-        super(nombre, apellido, altura, fechaNacimiento, acompanante, poderAtaque, defensa, curacion);
+    public maiar(String arma, String raza, String nombre, String apellido, double altura, Date fechaNacimiento, String acompanante, int poderAtaque, int defensa, int curacion) {
+        super(raza, nombre, apellido, altura, fechaNacimiento, acompanante, poderAtaque, defensa, curacion);
         this.arma = arma;
     }
 

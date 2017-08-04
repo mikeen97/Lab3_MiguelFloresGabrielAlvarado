@@ -6,6 +6,7 @@
 package lab3_miguelfloresgabrielalvarado;
 
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -20,13 +21,14 @@ public class Lab3_MiguelFloresGabrielAlvarado {
     public static void main(String[] args) {
         ArrayList<pueblo> ListPueblos = new ArrayList();
         String opcion = "";
-        while (!opcion.equalsIgnoreCase("e")) {
+        while (!opcion.equalsIgnoreCase("f")) {
             opcion = JOptionPane.showInputDialog("Menu\n"
                     + "a- Agregar Pueblo\n"
                     + "b- Eliminar Pueblo\n"
                     + "c- Listar Pueblos\n"
                     + "d- Modificar Pueblo\n"
-                    + "e- Salir \n");
+                    + "e- entrar a Pueblo Especifico\n"
+                    + "f- Salir \n");
             if (opcion.equals("a")) {
                 String name_pueblo = JOptionPane.showInputDialog("Ingrese el nombre del pueblo");
                 ListPueblos.add(new pueblo(name_pueblo));
@@ -55,6 +57,31 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                         t1.setNombre(name_pueblo);
                     }
                     contador++;
+                }
+            }
+            if (opcion.equals("e")) {
+                String p1 = "";
+                for (pueblo t1 : ListPueblos) {
+                    if (t1 instanceof pueblo) {
+                        p1 += ListPueblos.indexOf(t1) + " " + ((pueblo) t1) + "\n";
+                    }
+                }
+                JOptionPane.showMessageDialog(null, p1);
+                String puebloActual = JOptionPane.showInputDialog("Ingrese la posicion del pueblo que desea ingresar");
+                String opcion2 = "";
+                while (!opcion2.equalsIgnoreCase("e")) {
+                    opcion2 = JOptionPane.showInputDialog("Menu\n"
+                            + "a- Agregar Integrante\n"
+                            + "b- Eliminar Integrante\n"
+                            + "c- Listar Integrante\n"
+                            + "d- Modificar Integrante\n"
+                            + "e- Salir \n");
+                    if (opcion2.equals("a")) {
+                        String nombre = "", apellido = "", raza = "", acompanante = "", poderAtaque = "", defensa = "", curacion = "";
+                        double altura = 0;
+                        Date fecha;
+                        
+                    }
                 }
             }
         }
