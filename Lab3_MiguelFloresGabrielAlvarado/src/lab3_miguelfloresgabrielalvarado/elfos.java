@@ -13,9 +13,7 @@ import java.util.Date;
  * @author Miguel Flores
  */
 public class elfos extends Integrantes {
-
     private String arma;
-
     public elfos() {
     }
 

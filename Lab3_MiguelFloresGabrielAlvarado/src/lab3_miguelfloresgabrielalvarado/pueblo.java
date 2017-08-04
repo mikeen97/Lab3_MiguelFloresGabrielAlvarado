@@ -27,8 +27,8 @@ public class pueblo {
         return ListIntegrantes;
     }
 
-    public void setListIntegrantes(ArrayList<Integrantes> ListIntegrantes) {
-        this.ListIntegrantes = ListIntegrantes;
+    public void setListIntegrantes(Integrantes x) {
+        ListIntegrantes.add(x);
     }
 
     public String getNombre() {
