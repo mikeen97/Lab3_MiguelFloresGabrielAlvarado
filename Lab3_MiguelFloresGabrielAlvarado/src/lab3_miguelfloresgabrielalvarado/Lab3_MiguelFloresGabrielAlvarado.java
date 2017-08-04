@@ -172,9 +172,11 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             String pruba_hacha = JOptionPane.showInputDialog("Si el enano tiene hacha ingrese 1");
                             if (pruba_barba.equalsIgnoreCase("1")) {
                                 barba = "SitieneBarba";
+                                poderAtaque += 50;
                             }
                             if (pruba_hacha.equalsIgnoreCase("1")) {
                                 hacha = "SitieneHacha";
+                                poderAtaque += 50;
                             }
                             if (acompanante.equalsIgnoreCase("1")) {
                                 acompanante = "Aguilas";
@@ -188,16 +190,48 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                 }
                             }
                             if (acompanante.equalsIgnoreCase("2")) {
-
+                                acompanante = "Aguilas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("3")) {
-
+                                acompanante = "Aguilas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("4")) {
-
+                                acompanante = "Aguilas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("5")) {
-
+                                acompanante = "Aguilas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                         }
 
