@@ -19,8 +19,8 @@ public class Gondor extends Lugares{
         this.paraje = paraje;
     }
 
-    public Gondor(int paraje, String Extencion, int integrantes) {
-        super(Extencion, integrantes);
+    public Gondor(int paraje, String nombre, String Extencion, int integrantes) {
+        super(nombre, Extencion, integrantes);
         this.paraje = paraje;
     }
 
@@ -36,6 +36,8 @@ public class Gondor extends Lugares{
     public String toString() {
         return "Gondor{" + "paraje=" + paraje + '}';
     }
+
+   
 
     
 

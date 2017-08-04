@@ -96,11 +96,15 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             + "d- Modificar Lugares\n"
                             + "e- Salir \n");
                     if (opcion3.equals("a")) {
-                        String lugar = JOptionPane.showInputDialog("Ingrese el lugar");
+                        String nombre = JOptionPane.showInputDialog("Ingrese el lugar");
+                        String extension = JOptionPane.showInputDialog("Ingrese la extencion");
+                        int integrantes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de integrantes"));
+                        ListLugares.add(new Lugares(nombre, extension, integrantes));
 
                     }
                     if (opcion3.equals("b")) {
-                        int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el lugar"));
+                        int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el lugar a eliminar"));
+                        ListLugares.remove(pos);
 
                     }
                     if (opcion3.equals("c")) {
@@ -115,11 +119,14 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                     if (opcion.equals("d")) {
                         int pos = Integer.parseInt(
                                 JOptionPane.showInputDialog("Ingrese la Posicion del lugar a modificar: "));
-                        String Extencion_lugar = JOptionPane.showInputDialog("Ingrese nombre del Lugar");
+                           String nombre2 = JOptionPane.showInputDialog("Ingrese el lugar");
+                        String extension2 = JOptionPane.showInputDialog("Ingrese la extencion");
+                        int integrantes2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de integrantes"));
                         int contador = 0;
                         for (Lugares t1 : ListLugares) {
                             if (contador == pos) {
-                                t1.setExtencion(Extencion_lugar);
+                                t1.setNombre(nombre2);
+                                t1.setExtencion(extension2);
                                 t1.setIntegrantes(pos);
                             }
                             contador++;

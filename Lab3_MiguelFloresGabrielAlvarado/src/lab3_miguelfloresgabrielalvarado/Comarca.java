@@ -21,16 +21,10 @@ public class Comarca extends Lugares {
         this.poder = poder;
     }
 
-    public Comarca(int poder, String Extencion, int integrantes) {
-        super(Extencion, integrantes);
-        this.poder = poder;
-    }
+    
 
-    public int getPoder() {
-        return poder;
-    }
-
-    public void setPoder(int poder) {
+    public Comarca(int poder, String nombre, String Extencion, int integrantes) {
+        super(nombre, Extencion, integrantes);
         this.poder = poder;
     }
 
@@ -39,4 +33,5 @@ public class Comarca extends Lugares {
         return "Comarca{" + "poder=" + poder + '}';
     }
 
+   
 }
