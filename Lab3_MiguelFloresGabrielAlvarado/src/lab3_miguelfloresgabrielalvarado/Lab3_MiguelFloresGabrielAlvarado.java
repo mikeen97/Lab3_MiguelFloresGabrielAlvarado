@@ -235,85 +235,174 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                         }
 
                         if (raza.equalsIgnoreCase("3")) {
+                            poderAtaque = 10;
+                            defensa = 100;
+                            curacion = 1;
+                            raza = "Hobbits";
+                            int anillos = Integer.parseInt(JOptionPane.showInputDialog("Cuantos anillos tiene el Hobbits"));
+                            int cont = 0;
+                            while (cont < anillos) {
+                                poderAtaque = 10;
+                                defensa = 10;
+                                curacion = 10;
+                            }
                             if (acompanante.equalsIgnoreCase("1")) {
-                                raza = "maimar";
-                                acompanante = "Aguilas";
+                                acompanante = "Bestias Aladas";
                                 int contador = 0;
                                 for (pueblo t1 : ListPueblos) {
                                     if (puebloActual == contador) {
-                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        Hobbits m = new Hobbits(anillos + "", raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
+                            }
+
+                            if (acompanante.equalsIgnoreCase("2")) {
+                                acompanante = "Bestias Aladas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        Hobbits m = new Hobbits(anillos + "", raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
                                         t1.setListIntegrantes((Integrantes) m);
                                     }
                                     contador++;
                                 }
                             }
                             if (acompanante.equalsIgnoreCase("3")) {
-                                acompanante = "Aguilas";
+                                acompanante = "Bestias Aladas";
                                 int contador = 0;
                                 for (pueblo t1 : ListPueblos) {
                                     if (puebloActual == contador) {
-                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        Hobbits m = new Hobbits(anillos + "", raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
                                         t1.setListIntegrantes((Integrantes) m);
                                     }
                                     contador++;
                                 }
                             }
-                            if (acompanante.equalsIgnoreCase("4")) {
-                                acompanante = "Aguilas";
+                            if (acompanante.equalsIgnoreCase("3")) {
+                                acompanante = "Bestias Aladas";
                                 int contador = 0;
                                 for (pueblo t1 : ListPueblos) {
                                     if (puebloActual == contador) {
-                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        Hobbits m = new Hobbits(anillos + "", raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
                                         t1.setListIntegrantes((Integrantes) m);
                                     }
                                     contador++;
                                 }
                             }
                             if (acompanante.equalsIgnoreCase("5")) {
-                                acompanante = "Aguilas";
+                                acompanante = "Bestias Aladas";
                                 int contador = 0;
                                 for (pueblo t1 : ListPueblos) {
                                     if (puebloActual == contador) {
-                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        Hobbits m = new Hobbits(anillos + "", raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
                                         t1.setListIntegrantes((Integrantes) m);
                                     }
                                     contador++;
                                 }
                             }
                         }
-
-                        if (raza.equalsIgnoreCase("3")) {
-                            poderAtaque = 300;
-                            defensa = 200;
+                        if (raza.equalsIgnoreCase("4")) {
+                            poderAtaque = 150;
+                            defensa = 140;
                             curacion = 50;
-                            raza = "Hobbits";
-                            String anillos = JOptionPane.showInputDialog("Cuantos anillos tiene el Hobbits");
-                            if (acompanante.equalsIgnoreCase("1")) {
+                            raza = "Hombre";
+                            String arma = JOptionPane.showInputDialog("Ingrese el indce del arma que desea \n"
+                                    + "1) espada \n"
+                                    + "2) lanza \n"
+                                    + "3) arco \n"
+                                    + "");
+                            if (arma.equalsIgnoreCase("1")) {
+                                poderAtaque = +150;
+                            }
+                            if (arma.equalsIgnoreCase("2")) {
+                                poderAtaque += 100;
+                            }
+                            if (arma.equalsIgnoreCase("3")) {
+                                poderAtaque += 115;
+                            }
 
+                            if (acompanante.equalsIgnoreCase("1")) {
+                                acompanante = "Aguilas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        hombres m = new hombres(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("2")) {
-
+                                acompanante = "Arañas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        hombres m = new hombres(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("3")) {
-
+                                acompanante = "Balrogs";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        hombres m = new hombres(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("4")) {
-
+                                acompanante = "Bestias Aladas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        hombres m = new hombres(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("5")) {
-
+                                acompanante = "Dragones";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        hombres m = new hombres(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                         }
-
-                        if (raza.equalsIgnoreCase("4")) {
-                            if (acompanante.equalsIgnoreCase("1")) {
-                                raza = "Hombres";
-                            }
-                        }
-
                         if (raza.equalsIgnoreCase("5")) {
                             if (acompanante.equalsIgnoreCase("1")) {
                                 raza = "Maiar";
+                            }
+                        }
+                    }
+                    if (opcion2.equals("b")) {
+                        String p100 = "";
+                        for (pueblo t1 : ListPueblos) {
+                            if (t1 instanceof pueblo) {
+                                p100 += ListPueblos.indexOf(t1) + " " + ((pueblo) t1) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, p100);
+                        int pueblo_eliminar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese que lista de integrantes que desea ver."));
+                        int pos = 0;
+                        for (pueblo t1 : ListPueblos) {
+                            if (pos == pueblo_eliminar) {
+                                for (int i = 0; i < t1.getListIntegrantes().size(); i++) {
+                                    Integrantes m = t1.getListIntegrantes().get(i);
+                                    if (t1 instanceof pueblo) {
+                                        p1 += t1.getListIntegrantes().indexOf(m) + " " + ((Integrantes) m) + "\n";
+                                    }
+                                }
                             }
                         }
                     }
