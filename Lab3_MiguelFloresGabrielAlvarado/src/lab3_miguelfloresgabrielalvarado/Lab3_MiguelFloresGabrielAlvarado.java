@@ -161,7 +161,6 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                 }
                             }
                         }
-
                         if (raza.equalsIgnoreCase("2")) {
                             raza = "enanos";
                             poderAtaque = 300;
@@ -170,19 +169,13 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             String barba = "No tiene ", hacha = "No tiene";
                             String pruba_barba = JOptionPane.showInputDialog("Si el enano tiene barba ingrese 1");
                             String pruba_hacha = JOptionPane.showInputDialog("Si el enano tiene hacha ingrese 1");
+                            if (pruba_hacha.equalsIgnoreCase("1")) {
+                                hacha = "SitieneHacha";
+                                poderAtaque += 50;
+                            }
                             if (pruba_barba.equalsIgnoreCase("1")) {
-                                barba = "SitieneBarba";
-<<<<<<< HEAD
-                            }
-                            if (pruba_hacha.equalsIgnoreCase("1")) {
-                                hacha = "SitieneHacha";
-=======
+                                hacha = "SitieneBarba";
                                 poderAtaque += 50;
-                            }
-                            if (pruba_hacha.equalsIgnoreCase("1")) {
-                                hacha = "SitieneHacha";
-                                poderAtaque += 50;
->>>>>>> 59f5e56445897e6d0a241307d6c5edf38457f9f5
                             }
                             if (acompanante.equalsIgnoreCase("1")) {
                                 acompanante = "Aguilas";
@@ -196,27 +189,54 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                 }
                             }
                             if (acompanante.equalsIgnoreCase("2")) {
-<<<<<<< HEAD
-
+                                acompanante = "Arañas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("3")) {
-
+                                acompanante = "Balrogs";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("4")) {
-
+                                acompanante = "Bestias Aladas";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                             if (acompanante.equalsIgnoreCase("5")) {
-
+                                acompanante = "Dragones";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        enanos m = new enanos("SiTieneHermano", barba, hacha, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                         }
 
                         if (raza.equalsIgnoreCase("3")) {
                             if (acompanante.equalsIgnoreCase("1")) {
                                 raza = "maimar";
-                            }
-                        }
-
-=======
                                 acompanante = "Aguilas";
                                 int contador = 0;
                                 for (pueblo t1 : ListPueblos) {
@@ -269,7 +289,7 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             raza = "Hobbits";
                             String anillos = JOptionPane.showInputDialog("Cuantos anillos tiene el Hobbits");
                             if (acompanante.equalsIgnoreCase("1")) {
-                                
+
                             }
                             if (acompanante.equalsIgnoreCase("2")) {
 
@@ -285,7 +305,6 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             }
                         }
 
->>>>>>> 59f5e56445897e6d0a241307d6c5edf38457f9f5
                         if (raza.equalsIgnoreCase("4")) {
                             if (acompanante.equalsIgnoreCase("1")) {
                                 raza = "Hombres";
@@ -334,7 +353,7 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                     if (opcion.equals("d")) {
                         int pos = Integer.parseInt(
                                 JOptionPane.showInputDialog("Ingrese la Posicion del lugar a modificar: "));
-                           String nombre2 = JOptionPane.showInputDialog("Ingrese el lugar");
+                        String nombre2 = JOptionPane.showInputDialog("Ingrese el lugar");
                         String extension2 = JOptionPane.showInputDialog("Ingrese la extencion");
                         int integrantes2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de integrantes"));
                         int contador = 0;
