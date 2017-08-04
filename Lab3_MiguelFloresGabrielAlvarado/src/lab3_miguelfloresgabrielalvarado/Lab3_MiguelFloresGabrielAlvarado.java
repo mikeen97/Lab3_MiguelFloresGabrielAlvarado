@@ -236,20 +236,36 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                         }
 
                         if (raza.equalsIgnoreCase("3")) {
+                            poderAtaque = 300;
+                            defensa = 200;
+                            curacion = 50;
+                            raza = "Hobbits";
                             if (acompanante.equalsIgnoreCase("1")) {
-                                raza = "maimar";
+
+                            }
+                            if (acompanante.equalsIgnoreCase("2")) {
+
+                            }
+                            if (acompanante.equalsIgnoreCase("3")) {
+
+                            }
+                            if (acompanante.equalsIgnoreCase("4")) {
+
+                            }
+                            if (acompanante.equalsIgnoreCase("5")) {
+
                             }
                         }
 
                         if (raza.equalsIgnoreCase("4")) {
                             if (acompanante.equalsIgnoreCase("1")) {
-                                raza = "maimar";
+                                raza = "Hombres";
                             }
                         }
 
                         if (raza.equalsIgnoreCase("5")) {
                             if (acompanante.equalsIgnoreCase("1")) {
-                                raza = "maimar";
+                                raza = "Maiar";
                             }
                         }
                     }
