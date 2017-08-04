@@ -9,6 +9,34 @@ package lab3_miguelfloresgabrielalvarado;
  *
  * @author Gabriel Alvarado
  */
-public class Comarca {
-    
+public class Comarca extends Lugares {
+
+    private int poder;
+
+    public Comarca() {
+
+    }
+
+    public Comarca(int poder) {
+        this.poder = poder;
+    }
+
+    public Comarca(int poder, String Extencion, int integrantes) {
+        super(Extencion, integrantes);
+        this.poder = poder;
+    }
+
+    public int getPoder() {
+        return poder;
+    }
+
+    public void setPoder(int poder) {
+        this.poder = poder;
+    }
+
+    @Override
+    public String toString() {
+        return "Comarca{" + "poder=" + poder + '}';
+    }
+
 }
