@@ -240,8 +240,9 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             defensa = 200;
                             curacion = 50;
                             raza = "Hobbits";
+                            String anillos = JOptionPane.showInputDialog("Cuantos anillos tiene el Hobbits");
                             if (acompanante.equalsIgnoreCase("1")) {
-
+                                
                             }
                             if (acompanante.equalsIgnoreCase("2")) {
 
