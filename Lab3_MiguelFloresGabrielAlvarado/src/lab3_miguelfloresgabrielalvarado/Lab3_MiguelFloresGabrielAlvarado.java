@@ -21,14 +21,15 @@ public class Lab3_MiguelFloresGabrielAlvarado {
     public static void main(String[] args) {
         ArrayList<pueblo> ListPueblos = new ArrayList();
         String opcion = "";
-        while (!opcion.equalsIgnoreCase("f")) {
+        while (!opcion.equalsIgnoreCase("g")) {
             opcion = JOptionPane.showInputDialog("Menu\n"
                     + "a- Agregar Pueblo\n"
                     + "b- Eliminar Pueblo\n"
                     + "c- Listar Pueblos\n"
                     + "d- Modificar Pueblo\n"
                     + "e- entrar a Pueblo Especifico\n"
-                    + "f- Salir \n");
+                    + "f- Creacion de un lugar\n"
+                    + "g- Salir \n");
             if (opcion.equals("a")) {
                 String name_pueblo = JOptionPane.showInputDialog("Ingrese el nombre del pueblo");
                 ListPueblos.add(new pueblo(name_pueblo));
@@ -49,7 +50,7 @@ public class Lab3_MiguelFloresGabrielAlvarado {
             }
             if (opcion.equals("d")) {
                 int pos = Integer.parseInt(
-                        JOptionPane.showInputDialog("Ingrese la Posicion del Soldado a modificar: "));
+                        JOptionPane.showInputDialog("Ingrese la Posicion del lugar a modificar: "));
                 String name_pueblo = JOptionPane.showInputDialog("Ingrese nombre del pueblo");
                 int contador = 0;
                 for (pueblo t1 : ListPueblos) {
@@ -80,10 +81,53 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                         String nombre = "", apellido = "", raza = "", acompanante = "", poderAtaque = "", defensa = "", curacion = "";
                         double altura = 0;
                         Date fecha;
-                        
+
+                    }
+                }
+            }
+            if (opcion.equals("f")) {
+                String opcion3 = "";
+                ArrayList<Lugares> ListLugares = new ArrayList();
+                while (!opcion3.equalsIgnoreCase("e")) {
+                    opcion3 = JOptionPane.showInputDialog("Menu\n"
+                            + "a- Agregar Lugares\n"
+                            + "b- Eliminar Lugares\n"
+                            + "c- Listar Lugares\n"
+                            + "d- Modificar Lugares\n"
+                            + "e- Salir \n");
+                    if (opcion3.equals("a")) {
+                        String lugar = JOptionPane.showInputDialog("Ingrese el lugar");
+
+                    }
+                    if (opcion3.equals("b")) {
+                        int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el lugar"));
+
+                    }
+                    if (opcion3.equals("c")) {
+                        String p1 = "";
+                        for (Lugares t1 : ListLugares) {
+                            if (t1 instanceof Lugares) {
+                                p1 += ListPueblos.indexOf(t1) + " " + ((Lugares) t1) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, p1);
+                    }
+                    if (opcion.equals("d")) {
+                        int pos = Integer.parseInt(
+                                JOptionPane.showInputDialog("Ingrese la Posicion del lugar a modificar: "));
+                        String Extencion_lugar = JOptionPane.showInputDialog("Ingrese nombre del Lugar");
+                        int contador = 0;
+                        for (Lugares t1 : ListLugares) {
+                            if (contador == pos) {
+                                t1.setExtencion(Extencion_lugar);
+                                t1.setIntegrantes(pos);
+                            }
+                            contador++;
+                        }
                     }
                 }
             }
         }
+
     }
 }
