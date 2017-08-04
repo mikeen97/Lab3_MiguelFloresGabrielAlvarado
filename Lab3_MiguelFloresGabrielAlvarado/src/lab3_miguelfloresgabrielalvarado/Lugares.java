@@ -10,6 +10,7 @@ package lab3_miguelfloresgabrielalvarado;
  * @author Gabriel Alvarado
  */
 public class Lugares {
+    private String nombre;
     private String Extencion;
     private int integrantes;
     
@@ -17,9 +18,18 @@ public class Lugares {
         
     }
 
-    public Lugares(String Extencion, int integrantes) {
+    public Lugares(String nombre, String Extencion, int integrantes) {
+        this.nombre = nombre;
         this.Extencion = Extencion;
         this.integrantes = integrantes;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getExtencion() {
@@ -40,8 +50,10 @@ public class Lugares {
 
     @Override
     public String toString() {
-        return "Lugares{" + "Extencion=" + Extencion + ", integrantes=" + integrantes + '}';
+        return "Lugares{" + "nombre=" + nombre + ", Extencion=" + Extencion + ", integrantes=" + integrantes + '}';
     }
+    
+
     
     
 }

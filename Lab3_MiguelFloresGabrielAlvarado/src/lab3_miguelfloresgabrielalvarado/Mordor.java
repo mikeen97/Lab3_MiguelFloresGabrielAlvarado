@@ -9,15 +9,16 @@ package lab3_miguelfloresgabrielalvarado;
  *
  * @author Gabriel Alvarado
  */
-public class Mordor extends Lugares{
-    private int guardianes=4;
+public class Mordor extends Lugares {
+
+    private int guardianes = 4;
 
     public Mordor() {
         super();
     }
 
-    public Mordor(String Extencion, int integrantes) {
-        super(Extencion, integrantes);
+    public Mordor(String nombre, String Extencion, int integrantes) {
+        super(nombre, Extencion, integrantes);
     }
 
     public int getGuardianes() {
@@ -33,7 +34,4 @@ public class Mordor extends Lugares{
         return "Mordor{" + "guardianes=" + guardianes + '}';
     }
 
-   
-    
-    
 }

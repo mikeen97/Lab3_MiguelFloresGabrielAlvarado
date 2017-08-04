@@ -172,11 +172,17 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             String pruba_hacha = JOptionPane.showInputDialog("Si el enano tiene hacha ingrese 1");
                             if (pruba_barba.equalsIgnoreCase("1")) {
                                 barba = "SitieneBarba";
+<<<<<<< HEAD
+                            }
+                            if (pruba_hacha.equalsIgnoreCase("1")) {
+                                hacha = "SitieneHacha";
+=======
                                 poderAtaque += 50;
                             }
                             if (pruba_hacha.equalsIgnoreCase("1")) {
                                 hacha = "SitieneHacha";
                                 poderAtaque += 50;
+>>>>>>> 59f5e56445897e6d0a241307d6c5edf38457f9f5
                             }
                             if (acompanante.equalsIgnoreCase("1")) {
                                 acompanante = "Aguilas";
@@ -190,6 +196,27 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                 }
                             }
                             if (acompanante.equalsIgnoreCase("2")) {
+<<<<<<< HEAD
+
+                            }
+                            if (acompanante.equalsIgnoreCase("3")) {
+
+                            }
+                            if (acompanante.equalsIgnoreCase("4")) {
+
+                            }
+                            if (acompanante.equalsIgnoreCase("5")) {
+
+                            }
+                        }
+
+                        if (raza.equalsIgnoreCase("3")) {
+                            if (acompanante.equalsIgnoreCase("1")) {
+                                raza = "maimar";
+                            }
+                        }
+
+=======
                                 acompanante = "Aguilas";
                                 int contador = 0;
                                 for (pueblo t1 : ListPueblos) {
@@ -258,6 +285,7 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             }
                         }
 
+>>>>>>> 59f5e56445897e6d0a241307d6c5edf38457f9f5
                         if (raza.equalsIgnoreCase("4")) {
                             if (acompanante.equalsIgnoreCase("1")) {
                                 raza = "Hombres";
@@ -283,11 +311,15 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             + "d- Modificar Lugares\n"
                             + "e- Salir \n");
                     if (opcion3.equals("a")) {
-                        String lugar = JOptionPane.showInputDialog("Ingrese el lugar");
+                        String nombre = JOptionPane.showInputDialog("Ingrese el lugar");
+                        String extension = JOptionPane.showInputDialog("Ingrese la extencion");
+                        int integrantes = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de integrantes"));
+                        ListLugares.add(new Lugares(nombre, extension, integrantes));
 
                     }
                     if (opcion3.equals("b")) {
-                        int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el lugar"));
+                        int pos = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el lugar a eliminar"));
+                        ListLugares.remove(pos);
 
                     }
                     if (opcion3.equals("c")) {
@@ -302,11 +334,14 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                     if (opcion.equals("d")) {
                         int pos = Integer.parseInt(
                                 JOptionPane.showInputDialog("Ingrese la Posicion del lugar a modificar: "));
-                        String Extencion_lugar = JOptionPane.showInputDialog("Ingrese nombre del Lugar");
+                           String nombre2 = JOptionPane.showInputDialog("Ingrese el lugar");
+                        String extension2 = JOptionPane.showInputDialog("Ingrese la extencion");
+                        int integrantes2 = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero de integrantes"));
                         int contador = 0;
                         for (Lugares t1 : ListLugares) {
                             if (contador == pos) {
-                                t1.setExtencion(Extencion_lugar);
+                                t1.setNombre(nombre2);
+                                t1.setExtencion(extension2);
                                 t1.setIntegrantes(pos);
                             }
                             contador++;
