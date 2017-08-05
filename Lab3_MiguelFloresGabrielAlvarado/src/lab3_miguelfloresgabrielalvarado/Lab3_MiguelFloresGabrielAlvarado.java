@@ -21,7 +21,7 @@ public class Lab3_MiguelFloresGabrielAlvarado {
     public static void main(String[] args) {
         ArrayList<pueblo> ListPueblos = new ArrayList();
         String opcion = "";
-        while (!opcion.equalsIgnoreCase("g")) {
+        while (!opcion.equalsIgnoreCase("h")) {
             opcion = JOptionPane.showInputDialog("Menu\n"
                     + "a- Agregar Pueblo\n"
                     + "b- Eliminar Pueblo\n"
@@ -29,7 +29,8 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                     + "d- Modificar Pueblo\n"
                     + "e- entrar a Pueblo Especifico\n"
                     + "f- Creacion de un lugar\n"
-                    + "g- Salir \n");
+                    + "g- Simulacion de Guerra\n"
+                    + "h- Salir \n");
             if (opcion.equals("a")) {
                 String name_pueblo = JOptionPane.showInputDialog("Ingrese el nombre del pueblo");
                 ListPueblos.add(new pueblo(name_pueblo));
@@ -70,13 +71,12 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                 JOptionPane.showMessageDialog(null, p1);
                 int puebloActual = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la posicion del pueblo que desea ingresar"));
                 String opcion2 = "";
-                while (!opcion2.equalsIgnoreCase("e")) {
+                while (!opcion2.equalsIgnoreCase("d")) {
                     opcion2 = JOptionPane.showInputDialog("Menu\n"
                             + "a- Agregar Integrante\n"
-                            + "b- Eliminar Integrante\n"
-                            + "c- Listar Integrante\n"
-                            + "d- Modificar Integrante\n"
-                            + "e- Salir \n");
+                            + "b- Listar Integrante\n"
+                            + "c- Eliminar Integrante\n"
+                            + "d- Salir \n");
                     if (opcion2.equals("a")) {
                         String nombre = "", apellido = "", raza = "", acompanante = "";
                         int poderAtaque = 0, defensa = 0, curacion = 0;
@@ -233,7 +233,6 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                 }
                             }
                         }
-
                         if (raza.equalsIgnoreCase("3")) {
                             poderAtaque = 10;
                             defensa = 100;
@@ -245,6 +244,7 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                 poderAtaque = 10;
                                 defensa = 10;
                                 curacion = 10;
+                                cont++;
                             }
                             if (acompanante.equalsIgnoreCase("1")) {
                                 acompanante = "Bestias Aladas";
@@ -280,7 +280,7 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                     contador++;
                                 }
                             }
-                            if (acompanante.equalsIgnoreCase("3")) {
+                            if (acompanante.equalsIgnoreCase("4")) {
                                 acompanante = "Bestias Aladas";
                                 int contador = 0;
                                 for (pueblo t1 : ListPueblos) {
@@ -380,13 +380,80 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                             }
                         }
                         if (raza.equalsIgnoreCase("5")) {
+                            poderAtaque = 0;
+                            defensa = 0;
+                            curacion = 0;
+                            raza = "Maiar";
+                            String arma = JOptionPane
+                                    .showInputDialog("Ingrese nombre del arma \n"
+                                            + "1) sombrero"
+                                            + "2) baston");
+                            if (arma.equalsIgnoreCase("sombrero")) {
+                                curacion = 200;
+                            } else {
+                                curacion = 250;
+                                poderAtaque = 200;
+                            }
                             if (acompanante.equalsIgnoreCase("1")) {
-                                raza = "Maiar";
+                                acompanante = "Dragones";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        maiar m = new maiar(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
+                            }
+                            if (acompanante.equalsIgnoreCase("2")) {
+                                acompanante = "Aguila";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        maiar m = new maiar(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
+                            }
+                            if (acompanante.equalsIgnoreCase("3")) {
+                                acompanante = "Arana";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        maiar m = new maiar(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
+                            }
+                            if (acompanante.equalsIgnoreCase("4")) {
+                                acompanante = "Balrogs";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        maiar m = new maiar(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
+                            }
+                            if (acompanante.equalsIgnoreCase("5")) {
+                                acompanante = "Dragones";
+                                int contador = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (puebloActual == contador) {
+                                        maiar m = new maiar(arma, raza, nombre, apellido, altura, fecha, acompanante, poderAtaque, defensa, curacion);
+                                        t1.setListIntegrantes((Integrantes) m);
+                                    }
+                                    contador++;
+                                }
                             }
                         }
                     }
                     if (opcion2.equals("b")) {
                         String p100 = "";
+                        String Listaintegrantesss = "";
                         for (pueblo t1 : ListPueblos) {
                             if (t1 instanceof pueblo) {
                                 p100 += ListPueblos.indexOf(t1) + " " + ((pueblo) t1) + "\n";
@@ -400,8 +467,41 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                 for (int i = 0; i < t1.getListIntegrantes().size(); i++) {
                                     Integrantes m = t1.getListIntegrantes().get(i);
                                     if (t1 instanceof pueblo) {
-                                        p1 += t1.getListIntegrantes().indexOf(m) + " " + ((Integrantes) m) + "\n";
+                                        Listaintegrantesss += t1.getListIntegrantes().indexOf(m) + " " + ((Integrantes) m).getNombre() + "\n";
                                     }
+                                }
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, Listaintegrantesss);
+                    }
+                    if (opcion2.equals("c")) {
+                        String p100 = "";
+                        String Listaintegrantesss = "";
+                        for (pueblo t1 : ListPueblos) {
+                            if (t1 instanceof pueblo) {
+                                p100 += ListPueblos.indexOf(t1) + " " + ((pueblo) t1) + "\n";
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, p100);
+                        int pueblo_eliminar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese que lista de integrantes que desea ver."));
+                        int pos = 0;
+                        for (pueblo t1 : ListPueblos) {
+                            if (pos == pueblo_eliminar) {
+                                for (int i = 0; i < t1.getListIntegrantes().size(); i++) {
+                                    Integrantes m = t1.getListIntegrantes().get(i);
+                                    if (t1 instanceof pueblo) {
+                                        Listaintegrantesss += t1.getListIntegrantes().indexOf(m) + " " + ((Integrantes) m).getNombre() + "\n";
+                                    }
+                                }
+                            }
+                        }
+                        JOptionPane.showMessageDialog(null, Listaintegrantesss);
+                        int eliminar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese posicion del integrante a eliminar"));
+                        for (pueblo t1 : ListPueblos) {
+                            if (pos == pueblo_eliminar) {
+                                for (int i = 0; i < t1.getListIntegrantes().size(); i++) {
+                                    t1.getListIntegrantes().remove(eliminar);
+                                    JOptionPane.showMessageDialog(null, "Eliminado exitosamente!");
                                 }
                             }
                         }
@@ -439,7 +539,7 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                         }
                         JOptionPane.showMessageDialog(null, p10);
                     }
-                    if (opcion.equals("d")) {
+                    if (opcion3.equals("d")) {
                         int pos = Integer.parseInt(
                                 JOptionPane.showInputDialog("Ingrese la Posicion del lugar a modificar: "));
                         String nombre2 = JOptionPane.showInputDialog("Ingrese el lugar");
@@ -453,6 +553,78 @@ public class Lab3_MiguelFloresGabrielAlvarado {
                                 t1.setIntegrantes(pos);
                             }
                             contador++;
+                        }
+                    }
+                }
+            }
+            if (opcion.equalsIgnoreCase("g")) {
+                String opcionguerra = "";
+                while (!opcionguerra.equalsIgnoreCase("h")) {
+                    opcionguerra = JOptionPane.showInputDialog("Menu\n"
+                            + "a- Simulacion #1\n"
+                            + "b- Simulacion #2\n"
+                            + "h- Salir \n");
+                    if (opcionguerra.equals("a")) {
+                        String player1 = "";
+                        String player2 = "";
+                        int vida_player2 = 0;
+                        int vida_player1 = 0;
+                        int arma_player1 = 0;
+                        int arma_player2 = 0;
+                        boolean vive = true;
+                        int turno = 0;
+                        while (vive == true) {
+                            if (turno < 2) {
+                                String p100 = "";
+                                String Listaintegrantesss = "";
+                                for (pueblo t1 : ListPueblos) {
+                                    if (t1 instanceof pueblo) {
+                                        p100 += ListPueblos.indexOf(t1) + " " + ((pueblo) t1) + "\n";
+                                    }
+                                }
+                                JOptionPane.showMessageDialog(null, p100);
+                                int pueblo_eliminar = Integer.parseInt(JOptionPane.showInputDialog("Ingrese que lista de integrantes que desea ver."));
+                                int pos = 0;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (pos == pueblo_eliminar) {
+                                        for (int i = 0; i < t1.getListIntegrantes().size(); i++) {
+                                            Integrantes m = t1.getListIntegrantes().get(i);
+                                            if (t1 instanceof pueblo) {
+                                                Listaintegrantesss += t1.getListIntegrantes().indexOf(m) + " " + ((Integrantes) m).getNombre() + "\n";
+                                            }
+                                        }
+                                    }
+                                }
+                                JOptionPane.showMessageDialog(null, Listaintegrantesss);
+                                if (turno == 0) {
+                                    player1 = JOptionPane.showInputDialog("Ingrese que integrante va pelear");
+                                } else {
+                                    player2 = JOptionPane.showInputDialog("Ingrese que integrante va pelear");
+                                }
+                                turno++;
+                                for (pueblo t1 : ListPueblos) {
+                                    if (pos == pueblo_eliminar) {
+                                        for (int i = 0; i < t1.getListIntegrantes().size(); i++) {
+                                            Integrantes m = t1.getListIntegrantes().get(i);
+                                            if (m.getNombre().equalsIgnoreCase(player1)) {
+                                                vida_player1 = m.getDefensa();
+                                                arma_player1 = m.getDefensa();
+                                            }
+                                            if (m.getNombre().equalsIgnoreCase(player2)) {
+                                                vida_player2 = m.getDefensa();
+                                                arma_player2 = m.getDefensa();
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+                            String perdedor = "";
+                            while (vida_player1 > 0 || vida_player2 > 0) {
+                                vida_player1 = vida_player1 - arma_player2;
+                                vida_player2 = vida_player2 - arma_player1;
+
+                            }
                         }
                     }
                 }
